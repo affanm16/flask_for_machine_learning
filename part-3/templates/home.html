@@ -1,11 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
-</head>
-<body>
-<h1>Wekcome to Home Page</h1>
-</body>
-</html>
+<!-- Template Inheritance -->
+{% extends "layout.html" %}
+
+
+<!-- opening the block -->
+{% block home_page_content %} 
+<ul>
+    <li>Home</li>
+    <li><a href="{{ url_for('about_page') }}" target="_blank">About</a></li>
+    <li>Services</li>
+    <li><a href="{{ url_for('employees') }}" target="_blank">Employees</a></li>
+    <li>Contact US</li>
+    <li>Terms and Conditions</li>
+</ul>
+
+
+<!-- Closing the block -->
+{% endblock home_page_content %}
+

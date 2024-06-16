@@ -1,14 +1,32 @@
-<!DOCTYPE html>
+<!-- template inheritance -->
+
+{% extends "layout.html" %}
+
+<!-- adding the block which is displayed in about page -->
+{% block home_page_content %}
+<div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Doloremque eligendi maxime est ducimus et. Quis sed pariatur repellat omnis vel ullam eum, 
+        a dolorum repudiandae iste, animi voluptas, officia nemo.</p>
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, veritatis.</p>
+</div>
+
+{% endblock home_page_content %}
+
+
+<!-- custom template -->
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT</title>
+    <title>{{ title }}</title>
 </head>
 
 <body>
-    <h1>Wekcome to About Page</h1>
+    <h1>Wekcome to {{ title }} Page</h1>
 </body>
 
-</html>
+</html> -->
