@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<form action="" method="post"></form>
+<form action="" method="post">
     {{  form.hidden_tag() }}
         <div>
             {{ form.email.label }}
@@ -28,12 +28,18 @@
         </div>
         <br>
         <div>
-           {{ form.remeber_me }} 
-           {{ form.remeber_me.label }}
+           {{ form.remember_me }} 
+           {{ form.remember_me.label }}
         </div>
         <br>
         <div>
            {{ form.submit() }} 
         </div>
+        <br>
+        <div>
+        <p>Not Registered? <a href="{{ url_for('signup') }}">SIGNUP</a></p>
+
+        </div>
+</form>
 
 {% endblock content %}

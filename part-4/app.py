@@ -33,14 +33,12 @@ def login():
     email=form.email.data
     pw=form.password.data
     if form.validate_on_submit():
-        if email=="abc@gmail.com" and pw=="123":
+        if email=="abc@gmail.com" and pw=="12345678":
             flash("Logged in Successfully")
             return redirect(url_for("home"))
         else:
           flash("Incorrect Email or Password")  
-
-    return render_template("login.html",title="LOGIN",form=form
-    )
+    return render_template("login.html",title="LOGIN",form=form)
 
 if __name__=="__main__":
     app.run(debug=True)
