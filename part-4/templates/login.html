@@ -1,6 +1,39 @@
 {% extends "layout.html" %}
 
 {% block content %}
-
+<form action="" method="post"></form>
+    {{  form.hidden_tag() }}
+        <div>
+            {{ form.email.label }}
+            {{ form.email }}
+            {% if form.email.errors %}
+            {% for error in form.eamil.errors %}
+            <div>
+                {{ errors }}
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+        <br>
+        <div>
+            {{ form.password.label }}
+            {{ form.password }}
+            {% if form.password.errors %}
+            {% for error in form.password.errors %}
+            <div>
+                {{ errors }}
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+        <br>
+        <div>
+           {{ form.remeber_me }} 
+           {{ form.remeber_me.label }}
+        </div>
+        <br>
+        <div>
+           {{ form.submit() }} 
+        </div>
 
 {% endblock content %}
